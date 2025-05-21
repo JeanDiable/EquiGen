@@ -1,0 +1,9 @@
+mnist:
+  image_size: [28, 28]
+  path: "./dataset/mnist_splits.json"
+  statistics_path: "./dataset/mnist_statistics.pth"
+  inr_kwargs:
+    n_layers: 3
+    in_dim: 2
+    up_scale: 16
+    out_channels: 1
