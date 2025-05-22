@@ -3,7 +3,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EQUIGEN: Few-shot Implicit Function Generation via Equivariance</title>
 
-  <link rel="icon" type="image/x-icon" href="/EquiGen/assets/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
   <style>
 
   body {
@@ -155,7 +155,7 @@
 <hr>
 <div class="section motivation">
   <h2>💡Motivation</h2>
-  <img src="/EquiGen/assets/setting.gif" alt="Few-shot Implicit Function Generation Setting">
+  <img src="assets/setting.gif" alt="Few-shot Implicit Function Generation Setting">
   <p class="caption">
     Illustration of the Few-shot Implicit Function Generation setting with 3D INR data examples. The goal is to generate diverse INR weights from limited target samples. Source samples(top) show previously observed INRs of diverse shape categories. In practice, only limited target samples (bottom left) are available for training. The framework aims to learn a generator that can produce diverse generated samples (right) despite the limited training data. This setting addresses the practical scenario where only a few examples of new shapes are available for training.
   </p>
@@ -165,7 +165,7 @@
 
 <div class="section method-overview">
   <h2>🔍EQUIGEN Framework Overview</h2>
-  <img src="/EquiGen/assets/Overview.gif" alt="EQUIGEN Framework Overview">
+  <img src="assets/Overview.gif" alt="EQUIGEN Framework Overview">
   <p class="caption">
     The EQUIGEN framework consists of three stages: (1) Equivariant Encoder Pre-training, (2) Equivariance-Guided Distribution Modeling via diffusion, and (3) Few-shot Adaptation with equivariant subspace disturbance for diverse generation.
   </p>
@@ -184,11 +184,11 @@
   <p>EQUIGEN can generate diverse and high-quality 3D shapes from few-shot examples. Below are examples for airplanes, cars, and chairs.</p>
 
   <h3>Airplanes</h3>
-  <img src="/EquiGen/assets/airplane.png" alt="Generated Airplane examples using EQUIGEN">
+  <img src="assets/airplane.png" alt="Generated Airplane examples using EQUIGEN">
   <p class="caption">Input few-shot airplane samples (left) and diverse generated airplane INRs (right) by EQUIGEN.</p>
 
   <h3>Cars and Chairs</h3>
-  <img src="/EquiGen/assets/chairs_cars.png" alt="Generated Chair and Car examples using EQUIGEN">
+  <img src="assets/chairs_cars.png" alt="Generated Chair and Car examples using EQUIGEN">
   <p class="caption">Few-shot input samples and generated INRs for car and chair categories.</p>
 </div>
 
