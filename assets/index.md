@@ -44,7 +44,7 @@
 
 <div class="links">
 <p align="center">
-  <a href="[LINK_TO_YOUR_PAPER_PDF](https://arxiv.org/abs/2501.01601)">[Paper PDF]</a>
+  <a href="https://arxiv.org/abs/2501.01601">[Paper PDF]</a>
   <a href="https://github.com/JeanDiable/EquiGen">[Code]</a>
   <!-- <a href="LINK_TO_ARXIV_IF_AVAILABLE">[ArXiv]</a> -->
   <!-- <a href="#video">[Video]</a> -->
