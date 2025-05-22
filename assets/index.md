@@ -1,0 +1,126 @@
+<style>
+  body { font-family: Sans-Serif; margin: 20px auto; max-width: 900px; line-height: 1.6; padding: 10px; }
+  h1, h2, h3 { text-align: center; }
+  .authors, .affiliations, .conference { text-align: center; margin-bottom: 10px; }
+  .authors a { text-decoration: none; color: #007bff; }
+  .links { text-align: center; margin-bottom: 20px; font-size: 1.2em; }
+  .links a { margin: 0 10px; text-decoration: none; font-weight: bold; }
+  .section { margin-top: 40px; margin-bottom: 40px; }
+  .section img, .section video { display: block; margin: 20px auto; max-width: 100%; height: auto; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+  .caption { text-align: center; font-style: italic; color: #555; margin-top: -10px; margin-bottom: 20px; }
+  .bibtex pre { background-color: #f9f9f9; border: 1px solid #ddd; padding: 15px; white-space: pre-wrap; word-wrap: break-word; }
+  hr { border: 0; height: 1px; background: #ddd; margin: 40px 0; }
+</style>
+
+<h1>EQUIGEN: Few-shot Implicit Function Generation via Equivariance</h1>
+
+<div class="authors">
+  <!-- Replace with actual author names and links if available, or keep as anonymous -->
+  <p align="center">
+    <strong><a href="https://jeandiable.github.io/">Suizhi Huang</a></strong>
+    &nbsp;&nbsp;
+    <strong><a href="https://adamdad.github.io/">Xingyi Yang</a></strong>
+    &nbsp;&nbsp;
+    <strong><a href="https://scholar.google.com/citations?user=GtNuBJcAAAAJ&hl=zh-CN">Hongtao Lu</a></strong>
+    &nbsp;&nbsp;
+    <strong><a href="https://sites.google.com/site/sitexinchaowang/">Xinchao Wang</a></strong>
+  </p>
+<!--   Example: <a href="YOUR_PERSONAL_PAGE_LINK">Your Name</a><sup>1</sup>, <a href="ANOTHER_AUTHOR_LINK">Another Author</a><sup>2</sup> -->
+</div>
+
+<div class="affiliations">
+  <!-- Replace with actual affiliations -->
+  <p align="center">
+<sup>1</sup>Shanghai Jiao Tong University, <sup>2</sup>National University of Singapore
+</p>
+  <!-- Example: <sup>1</sup>Your University, <sup>2</sup>Another University -->
+</div>
+
+<div class="conference">
+<p align="center">
+  <b>CVPR 2025 HIGHLIGHT</b> 
+</p>
+</div>
+
+<div class="links">
+<p align="center">
+  <a href="[LINK_TO_YOUR_PAPER_PDF](https://arxiv.org/abs/2501.01601)">[Paper PDF]</a>
+  <a href="https://github.com/JeanDiable/EquiGen">[Code]</a>
+  <!-- <a href="LINK_TO_ARXIV_IF_AVAILABLE">[ArXiv]</a> -->
+  <!-- <a href="#video">[Video]</a> -->
+</p>
+</div>
+
+
+<hr>
+<div class="Abstract">
+  <h2>Abstract</h2>
+  <p>
+    Implicit Neural Representations (INRs) have emerged as a powerful framework for representing continuous signals. However, generating diverse INR weights remains challenging due to limited training data. We introduce <strong>Few-shot Implicit Function Generation</strong>, a new problem setup that aims to generate diverse yet functionally consistent INR weights from only a few examples. This is challenging because even for the same signal, the optimal INRs can vary significantly depending on their initializations. To tackle this, we propose <strong>EQUIGEN</strong>, a framework that can generate new INRs from limited data. The core idea is that functionally similar networks can be transformed into one another through weight permutations, forming an equivariance group. By projecting these weights into an equivariant latent space, we enable diverse generation within these groups, even with few examples. EQUIGEN implements this through an equivariant encoder trained via contrastive learning and smooth augmentation, an equivariance-guided diffusion process, and controlled perturbations in the equivariant subspace. Experiments on 2D image and 3D shape INR datasets demonstrate that our approach effectively generates diverse INR weights while preserving their functional properties in few-shot scenarios.
+  </p>
+</div>
+
+<hr>
+<div class="section motivation">
+  <h2>Motivation</h2>
+  <img src="assets/setting.gif" alt="Few-shot Implicit Function Generation Setting">
+  <p class="caption">
+    Illustration of the Few-shot Implicit Function Generation setting with 3D INR data examples. The goal is to generate diverse INR weights from limited target samples. Source samples(top) show previously observed INRs of diverse shape categories. In practice, only limited target samples (bottom left) are available for training. The framework aims to learn a generator that can produce diverse generated samples (right) despite the limited training data. This setting addresses the practical scenario where only a few examples of new shapes are available for training.
+  </p>
+</div>
+
+<hr>
+
+<div class="section method-overview">
+  <h2>EQUIGEN Framework Overview</h2>
+  <img src="assets/Overview.gif" alt="EQUIGEN Framework Overview">
+  <p class="caption">
+    The EQUIGEN framework consists of three stages: (1) Equivariant Encoder Pre-training, (2) Equivariance-Guided Distribution Modeling via diffusion, and (3) Few-shot Adaptation with equivariant subspace disturbance for diverse generation.
+  </p>
+  <p>
+    Our method systematically leverages the principle of equivariance in neural network weight spaces.
+    First, an <strong>Equivariant Encoder</strong> is pre-trained using contrastive learning and smooth augmentations to map functionally equivalent weights to similar representations in an equivariant latent space.
+    Second, an <strong>Equivariance-Guided Diffusion</strong> model, conditioned on these learned features, reconstructs the weight distribution while preserving symmetry properties.
+    Finally, for <strong>Few-shot Adaptation</strong>, we introduce controlled perturbations in the equivariant subspace to generate diverse yet functionally consistent INR weights from limited examples.
+  </p>
+</div>
+
+<hr>
+
+<div class="section results">
+  <h2>Results on 3D Shapes (ShapeNet-INRs)</h2>
+  <p>EQUIGEN can generate diverse and high-quality 3D shapes from few-shot examples. Below are examples for airplanes, cars, and chairs.</p>
+
+  <h3>Airplanes</h3>
+  <img src="assets/airplane.png" alt="Generated Airplane examples using EQUIGEN">
+  <p class="caption">Input few-shot airplane samples (left) and diverse generated airplane INRs (right) by EQUIGEN.</p>
+
+  <h3>Cars and Chairs</h3>
+  <img src="assets/chairs_cars.png" alt="Generated Chair and Car examples using EQUIGEN">
+  <p class="caption">Few-shot input samples and generated INRs for car and chair categories.</p>
+</div>
+
+
+<hr>
+<div class="section bibtex">
+  <h2>BibTeX</h2>
+  <p>If you find EQUIGEN useful for your research, please consider citing our paper:</p>
+  <pre><code>
+@article{huang2025few,
+  title={Few-shot Implicit Function Generation via Equivariance},
+  author={Huang, Suizhi and Yang, Xingyi and Lu, Hongtao and Wang, Xinchao},
+  journal={arXiv preprint arXiv:2501.01601},
+  year={2025}
+}
+  </code></pre>
+</div>
+
+<hr>
+
+<div class="section acknowledgements">
+  <h2>Acknowledgements</h2>
+  <p>
+    <!-- Add any acknowledgements here -->
+    This project is build upon several previous works, including <a href="https://github.com/Adamdad/neumeta">Neumeta</a>, <a href="https://github.com/AvivNavon/DWSNets">DWSNet</a>, <a href="https://github.com/Rgtemze/HyperDiffusion">HyperDiffusion</a>, and several commonly used repos including <a href="https://github.com/huggingface/diffusers">Diffusers</a>, <a href="https://github.com/huggingface/accelerate">Accelerator</a> and so on. Show our deepest respect for them.
+  </p>
+</div>
