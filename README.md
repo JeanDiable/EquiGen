@@ -150,10 +150,11 @@ This project is build upon several previous works, including [Neumeta](https://g
 
 # 📖 Citation
 ```
-@article{huang2025few,
-  title={Few-shot Implicit Function Generation via Equivariance},
-  author={Huang, Suizhi and Yang, Xingyi and Lu, Hongtao and Wang, Xinchao},
-  journal={arXiv preprint arXiv:2501.01601},
-  year={2025}
+@InProceedings{Huang_2025_CVPR,
+author    = {Huang, Suizhi and Yang, Xingyi and Lu, Hongtao and Wang, Xinchao},
+title     = {Few-shot Implicit Function Generation via Equivariance},
+booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+month     = {June},
+year      = {2025},
 }
 ```
