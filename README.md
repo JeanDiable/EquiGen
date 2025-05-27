@@ -145,6 +145,33 @@ For the FID score, please follow the official [pytorch-fid](https://github.com/m
 - [ ] ShapeNet-INR Support
 - [ ] ...
 
+<div class="section results">
+  <h2>🌟Results on 3D Shapes (ShapeNet-INRs)</h2>
+  <p>EQUIGEN can generate diverse and high-quality 3D shapes from few-shot examples. Below are examples for airplanes, cars, and chairs.</p>
+
+  <h3>Airplanes</h3>
+  <img src="docs/assets/airplane.png" alt="Generated Airplane examples using EQUIGEN">
+  <p class="caption">Input few-shot airplane samples (left) and diverse generated airplane INRs (right) by EQUIGEN.</p>
+
+  <h3>Cars and Chairs</h3>
+  <img src="docs/assets/chairs_cars.png" alt="Generated Chair and Car examples using EQUIGEN">
+  <p class="caption">Few-shot input samples and generated INRs for car and chair categories.</p>
+</div>
+
+<hr>
+
+<div class="section diffusion">
+  <h2>🌟Diffusion Process Samples</h2>
+
+  <img src="docs/assets/sample1_mod.gif" alt="diffusion sample 1">
+  <!-- <p class="caption">Diffusion process for generating diverse INR weights from limited target samples.</p> -->
+
+  <img src="docs/assets/sample3_mod.gif" alt="diffusion sample 2">
+  <!-- <p class="caption">Diffusion process for generating diverse INR weights from limited target samples.</p> -->
+
+
+</div>
+
 # Acknowledgement
 This project is build upon several previous works, including [Neumeta](https://github.com/Adamdad/neumeta), [DWSNet](https://github.com/AvivNavon/DWSNets), [HyperDiffusion](https://github.com/Rgtemze/HyperDiffusion), and several commonly used repos including [Diffusers](https://github.com/huggingface/diffusers), [Accelerator](https://github.com/huggingface/accelerate) and so on. Show our deepest respect for them.
 
