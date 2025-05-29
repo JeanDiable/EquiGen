@@ -162,7 +162,7 @@ For the FID score, please follow the official [pytorch-fid](https://github.com/m
 
 <div class="section diffusion">
   <h2>🌟Diffusion Process Samples</h2>
-  <div style="display: flex; justify-content: space-between; gap: 20px;">
+  <div style="display: flex; flex-direction: row; justify-content: space-between; gap: 20px;">
     <img src="docs/assets/samp1.gif" alt="diffusion sample 1" style="width: 30%;">
     <img src="docs/assets/samp2.gif" alt="diffusion sample 2" style="width: 30%;">
     <img src="docs/assets/samp3.gif" alt="diffusion sample 3" style="width: 30%;">
@@ -171,6 +171,8 @@ For the FID score, please follow the official [pytorch-fid](https://github.com/m
 
 
 </div>
+
+<hr>
 
 # Acknowledgement
 This project is build upon several previous works, including [Neumeta](https://github.com/Adamdad/neumeta), [DWSNet](https://github.com/AvivNavon/DWSNets), [HyperDiffusion](https://github.com/Rgtemze/HyperDiffusion), and several commonly used repos including [Diffusers](https://github.com/huggingface/diffusers), [Accelerator](https://github.com/huggingface/accelerate) and so on. Show our deepest respect for them.
