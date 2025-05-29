@@ -162,14 +162,11 @@ For the FID score, please follow the official [pytorch-fid](https://github.com/m
 
 <div class="section diffusion">
   <h2>🌟Diffusion Process Samples</h2>
-
-  <img src="docs/assets/samp1.gif" alt="diffusion sample 1">
-  <!-- <p class="caption">Diffusion process for generating diverse INR weights from limited target samples.</p> -->
-
-  <img src="docs/assets/samp2.gif" alt="diffusion sample 2">
-  <!-- <p class="caption">Diffusion process for generating diverse INR weights from limited target samples.</p> -->
-
-  <img src="docs/assets/samp3.gif" alt="diffusion sample 3">
+  <div style="display: flex; justify-content: space-between; gap: 20px;">
+    <img src="docs/assets/samp1.gif" alt="diffusion sample 1" style="width: 30%;">
+    <img src="docs/assets/samp2.gif" alt="diffusion sample 2" style="width: 30%;">
+    <img src="docs/assets/samp3.gif" alt="diffusion sample 3" style="width: 30%;">
+  </div>
   <!-- <p class="caption">Diffusion process for generating diverse INR weights from limited target samples.</p> -->
 
 
